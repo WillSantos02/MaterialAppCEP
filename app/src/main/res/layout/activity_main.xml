@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".MainActivity"
+    android:background="#E6E6E6">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Qual o CEP?"
+            app:navigationIcon="@drawable/ic_baseline_navigate_before_24"
+            app:menu="@menu/top_app_bar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfInputCep"
+        android:layout_marginTop="28dp"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:hint="CEP (apenas números)"
+        android:textColorHint="#80000000"
+        android:layout_gravity="center"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:startIconDrawable="@drawable/outline_search_24">
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/etInputCep"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:inputType="number"
+            android:backgroundTint="#F2F2F2"
+            app:mask="_____-___"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F2F2F2"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resultado da busca"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Insira um CEP para pesquisa"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

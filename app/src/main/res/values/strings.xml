@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Qual o CEP?</string>
+    <string name="consumo_api_viacep">Consumo API ViaCEP</string>
+    <string name="informe_o_cep">Informe o CEP</string>
+    <string name="consumir_json">Consumir JSON</string>
+    <string name="copyright">© 2022 Wirlley Santos</string>
+    <string name="contentDescription">splash screen with logo image</string>
+
+</resources>
